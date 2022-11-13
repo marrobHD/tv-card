@@ -45,13 +45,18 @@
 | volume_up | `service` | **Optional**| service to call when volume up button pressed
 | volume_down | `service` | **Optional**| service to call when volume down button pressed
 | volume_mute | `service` | **Optional**| service to call when volume mute button pressed
-| netflix | `service` | **Optional**| service to call when netflix button pressed
-| prime_video | `service` | **Optional**| service to call when prime video button pressed
-| youtube | `service` | **Optional**| service to call when youtube button pressed
+| applications | `{applicationId: application}` | **Optional**| list of applications to be displayed in the remote
 
 ## `service` Options
 | Name | Type | Requirement | Description
 | ---- | ---- | ------- | -----------
+| service | string | **Required** | Service to call
+| service_data | string | **Optional** | Service data to use
+
+## `application` Options
+| Name | Type | Requirement | Description
+| ---- | ---- | ------- | -----------
+| icon | string | **Required** | The icon of the application
 | service | string | **Required** | Service to call
 | service_data | string | **Optional** | Service data to use
 
