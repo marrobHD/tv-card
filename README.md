@@ -79,6 +79,13 @@ Add a custom element in your `ui-lovelace.yaml`
           service: switch.turn_on
           service_data:
             entity_id: switch.bedroom_tv_power
+        applications:
+          netflix:
+            icon: mdi:netflix
+            service: androidtv.adb_command
+            service_data:
+              command: input keyevent 191
+              entity_id: media_player.braviatv_wohnzimmer
 ```
 
 ### Example 1:
@@ -167,31 +174,6 @@ entities:
               host: 192.168.1.53
               packet: >-
                 JgBGAJOWEjcSOBI3EhMTEhITEhMSExI4ETgSOBEUERQRFBEUERQRFBI3EhMSFBETEhMSExMSEjgSExE4EzcRORI3ETkROBIADQUAAA==
-          remote: input_select.tv_input
-          reverse:
-            service: broadlink.send
-            service_data:
-              host: 192.168.1.53
-              packet: >-
-                JgBGAJOVETYUOBE5ERQRFBEUERQRFBE4ETkROBITEhMSExITEhMSOBEUETgSExITEhMSOBEUERQROBITEjgROBI4ERQROBMADQUAAA==
-          right:
-            service: broadlink.send
-            service_data:
-              host: 192.168.1.53
-              packet: >-
-                JgBGAJOVETkROBI4EhMRFBEUERQRFBE4EjgROBITEhMSExITEhMSExI4ERQRFBEUETgSOBEUETgSExI4ETgSOBEUERQROBIADQUAAA==
-          select:
-            service: broadlink.send
-            service_data:
-              host: 192.168.1.53
-              packet: >-
-                JgBGAJSVETgSOBE4EhMSExITEhMSExI4ETgSOBEUERQSExEUERQRFBEUERQROBITEjgROBMSEjgSNxM3EhMSOBEUERQROBEADQUAAA==
-          source:
-            service: broadlink.send
-            service_data:
-              host: 192.168.1.53
-              packet: >-
-                JgBGAJKXEDkRORA4EhQSExETEBYRFRA5EDgTOBAVDxcPFRAVEBURNxMTERQRFBITERQRFBEUERQQOhI2EjkQORE5EDkSNxEADQUAAA==
 ```
 
 
